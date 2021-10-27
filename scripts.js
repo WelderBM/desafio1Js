@@ -23,20 +23,20 @@ console.log(`Olá, meu nome é ${meuNome} e meu partner do CodeClub é o ${nomeM
 
 function redirecionar() {
     let VarRedirecionar = document.getElementById("idRedirecionar").value
-    if (VarRedirecionar == 1) {
+    if (VarRedirecionar === 1) {
         igual()
     }
     else {
-        if (VarRedirecionar == 2) {
+        if (VarRedirecionar === 2) {
             diferente()
         } else {
-            if (VarRedirecionar == 3) {
+            if (VarRedirecionar === 3) {
                 igualArray()
             } else {
-                if (VarRedirecionar == 4) {
+                if (VarRedirecionar === 4) {
                     diferenteArray()
                 } else {
-                    if (VarRedirecionar == 5) {
+                    if (VarRedirecionar === 5) {
                         igualDoisObjects()
                     } else {
                         igualUmObject()
@@ -50,7 +50,7 @@ function redirecionar() {
 function igual() {
     let nomeOne = document.getElementById("nome1").value
     let nomeTwo = document.getElementById("nome2").value
-    let resultado1 = (nomeOne == nomeTwo)
+    let resultado1 = (nomeOne === nomeTwo)
     console.log(resultado1);
 }
 
@@ -60,7 +60,7 @@ function igual() {
 function diferente() {
     let nomeOne = document.getElementById("nome1").value
     let nomeTwo = document.getElementById("nome2").value
-    let resultado1 = (nomeOne != nomeTwo)
+    let resultado1 = (nomeOne !== nomeTwo)
     console.log(resultado1);
 }
 
@@ -71,7 +71,7 @@ function diferente() {
 function igualArray() {
     let Array1 = []
     Array1.push(document.getElementById("nome1").value, document.getElementById("nome2").value)
-    let resultado1 = (Array1[0] == Array1[1])
+    let resultado1 = (Array1[0] === Array1[1])
     console.log(resultado1);
 }
 
@@ -82,7 +82,7 @@ function igualArray() {
 function diferenteArray() {
     let Array1 = []
     Array1.push(document.getElementById("nome1").value, document.getElementById("nome2").value)
-    let resultado1 = (Array1[0] != Array1[1])
+    let resultado1 = (Array1[0] !== Array1[1])
     console.log(resultado1);
 }
 
@@ -132,7 +132,7 @@ const person5 = {
 function igualDoisObjects() {
     const person6 = { firstName: document.getElementById("nome1").value }
     const person7 = { firstName: document.getElementById("nome2").value }
-    console.log(person6.firstName == person7.firstName);
+    console.log(person6.firstName === person7.firstName);
 }
 //[x] Faça um programa que imprima na tela se um nome é igual ao outro nome digitado.
 // Porém, os dois nomes devem estar em um objeto. Ex: const object1 = {firstName:"João", seccondName:"Maria"}.
@@ -142,7 +142,7 @@ function igualUmObject() {
         firstName: document.getElementById("nome1").value,
         secondName: document.getElementById("nome2").value
     }
-    console.log(person8.firstName == person8.secondName);
+    console.log(person8.firstName === person8.secondName);
 }
 
 //[] Faça um programa onde toda vez que ele rodar, coloca na tela um número aleatório entre 1 e 100.
