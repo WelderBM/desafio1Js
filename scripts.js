@@ -23,28 +23,30 @@ console.log(`Olá, meu nome é ${meuNome} e meu partner do CodeClub é o ${nomeM
 
 function redirecionar() {
     let VarRedirecionar = document.getElementById("idRedirecionar").value
-    if (VarRedirecionar == 1) {
-        igual()
-    }
-    if (VarRedirecionar == 2) {
-        diferente()
-    }
-    if (VarRedirecionar == 3) {
-        igualArray()
-    }
-    if (VarRedirecionar == 4) {
-        diferenteArray()
-    }
-    if (VarRedirecionar == 5) {
-        igualDoisObjects()
-    }
-    if (VarRedirecionar == 6) {
-        igualUmObject()
-    }
-}
+    switch (VarRedirecionar) {
+        case '1':
+            igual();
+            break;
+        case '2':
+            diferente();
+            break;
+        case '3':
+            igualArray();
+            break;
+        case '4':
+            diferenteArray();
+            break;
+        case '5':
+            igualDoisObjects();
+            break;
+        case '6':
+            igualUmObject();
+            break;
 
-function mostrarNaTela(resultado1,x) {
-    document.getElementById("Resultado").innerHTML = " resultado: " + resultado1
+        default:
+        console.log("algo está errado");
+            break;
+    }
 }
 
 function igual() {
@@ -148,6 +150,11 @@ function igualUmObject() {
     mostrarNaTela(resultado1)
 }
 
-//[] Faça um programa onde toda vez que ele rodar, coloca na tela um número aleatório entre 1 e 100.
+//[x] Faça um programa onde toda vez que ele rodar, coloca na tela um número aleatório entre 1 e 100.
 
 console.log(Math.ceil(Math.pow(10, 2) * Math.random()));
+
+
+function mostrarNaTela(resultado1) {
+    document.getElementById("Resultado").innerHTML = " resultado: " + resultado1;
+}
