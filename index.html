@@ -5,47 +5,39 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles.css">
+
     <title>desafio1Js</title>
 </head>
 
 <body>
-    <h1>desfios de javascript!</h1>
-    <h3>digite os nomes ou valores numéricos nos dois primeiros inputs e no terceiro...</h3>
-    <ul>
-        <li>digite 1 se você quer saber se são iguais</li>
-        <li>digite 2 se você quer saber se são diferentes</li>
-        <li>digite 3 se você quer saber se são iguais usando uma array</li>
-        <li>digite 4 se você quer saber se são diferentes usando uma array</li>
-        <li>digite 5 se você quer saber se são iguais usando dois objetos</li>
-        <li>digite 6 se você quer saber se são iguais usando um objetos apenas</li>
-    </ul>
+    <div id="div-h1">
+        <h1>desfios de javascript!</h1>
+    </div>
+    <div id="conteiner">
+        <h2>digite os nomes ou valores numéricos nos dois primeiros inputs e no terceiro...</h3>
+            <ul>
+                <li>digite 1 se você quer saber se são iguais</li>
+                <li>digite 2 se você quer saber se são diferentes</li>
+                <li>digite 3 se você quer saber se são iguais usando uma array</li>
+                <li>digite 4 se você quer saber se são diferentes usando uma array</li>
+                <li>digite 5 se você quer saber se são iguais usando dois objetos</li>
+                <li>digite 6 se você quer saber se são iguais usando um objeto apenas</li>
+            </ul>
+            <div id="div-input">
+                <input class="inputAndButton" type="text" id="nome1" placeholder="primeiro nome">
 
-    <p>Veja o resultado no <b>console</b>!!</p>
+                <input class="inputAndButton" type="text" id="nome2" placeholder="segundo nome">
 
-    <input type="text" id="nome1" placeholder="primeiro nome">
-    
-    <input type="text" id="nome2" placeholder="segundo nome">
+                <input class="inputAndButton" type="number" id="idRedirecionar" placeholder="tipo" min="1" max="6" width="100px">
 
-    <input type="number" id="idRedirecionar" placeholder="digite" min="1" max="6" width="100px">
+                <button class="inputAndButton" onclick="redirecionar();">relacionar</button>
+            </div>
+            <p id="Resultado"></p>
 
-    <button onclick="redirecionar();">relacionar</button>
-
-    <p id="Resultado"></p>
-
-    <a href="https://github.com/WelderBM/desafio1Js">Aqui esté meu repostório😍</a>
-
-    <style>
-        *{
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-            
-        }
-        a {
-            display: block;
-            margin-top: 50PX;
-        }
-    </style>
+            <a href="https://github.com/WelderBM/desafio1Js">Aqui esté meu repostório😍</a>
+    </div>
 
 </body>
 
